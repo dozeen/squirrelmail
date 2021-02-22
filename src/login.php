@@ -67,7 +67,8 @@ $loginname_value = (sqGetGlobalVar('loginname', $loginname) ? sm_encode_html_spe
 
 //FIXME: should be part of the template, not the core!
 /* Output the javascript onload function. */
-$header = "<script type=\"text/javascript\">\n" .
+$header = "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\">\n" .
+          "<script type=\"text/javascript\">\n" .
           "<!--\n".
           "  var alreadyFocused = false;\n".
           "  function squirrelmail_loginpage_onload() {\n".
@@ -84,7 +85,8 @@ $header = "<script type=\"text/javascript\">\n" .
           "    }\n".
           "  }\n".
           "// -->\n".
-          "</script>\n";
+          "</script>\n".
+          "<div class=\"container-fluid\">\n";
 global $theme, $theme_default;
 if ($theme !== null && in_array($theme_default, $theme) && @file_exists($theme[$theme_default]['PATH']))
    @include ($theme[$theme_default]['PATH']);
