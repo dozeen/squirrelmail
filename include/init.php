@@ -133,7 +133,7 @@ $seed = hexdec(substr(md5($seed), 0, 9));
 
 // PHP 4.2 and up don't require seeding, but their used seed algorithm
 // is of questionable quality, so we keep doing it ourselves. */
-mt_srand($seed);
+//DOZEEN in PHP8 NOT Like this ------------> mt_srand($seed);
 
 /**
  * calculate SM_PATH and calculate the base_uri

@@ -28,7 +28,7 @@
 /* retrieve the template vars */
 extract($t);
 
-?><body onload="squirrelmail_loginpage_onload()">
+?><div class="container-fluid" ><body onload="squirrelmail_loginpage_onload()">
 <form name="login_form" id="login_form" action="redirect.php" method="post" onsubmit="document.login_form.js_autodetect_results.value=1">
 <?php if (!empty($plugin_output['login_top'])) echo $plugin_output['login_top']; ?>
 <div id="sqm_login">
@@ -51,7 +51,7 @@ extract($t);
    <?php echo _("Name:"); ?>
   </label></td>
   <td class="sqm_loginFieldInput">
-   <input type="text" name="<?php global $username_form_name; echo $username_form_name; ?>" value="<?php echo $login_field_value; ?>" id="login_username" onfocus="alreadyFocused=true;" <?php global $username_form_extra; echo $username_form_extra; ?> />
+   <input type="text"  class="form-control form-control-lg" name="<?php global $username_form_name; echo $username_form_name; ?>" value="<?php echo $login_field_value; ?>" id="login_username" onfocus="alreadyFocused=true;" <?php global $username_form_extra; echo $username_form_extra; ?> />
   </td>
  </tr>
  <tr>
@@ -59,14 +59,14 @@ extract($t);
    <?php echo _("Password:"); ?>
   </label></td>
   <td class="sqm_loginFieldInput">
-   <input type="password" name="<?php global $password_form_name; echo $password_form_name; ?>" value="" id="secretkey" onfocus="alreadyFocused=true;" <?php global $password_form_extra; echo $password_form_extra; ?> />
+   <input type="password"  class="form-control form-control-lg" name="<?php global $password_form_name; echo $password_form_name; ?>" value="" id="secretkey" onfocus="alreadyFocused=true;" <?php global $password_form_extra; echo $password_form_extra; ?> />
    <?php echo $login_extra; ?>
   </td>
  </tr>
  <?php if (!empty($plugin_output['login_form'])) echo $plugin_output['login_form']; ?>
  <tr>
   <td class="sqm_loginSubmit" colspan="2">
-   <input type="submit" value="<?php echo _("Login"); ?>" />
+   <input type="submit" class="btn btn-primary mb-3" value="<?php echo _("Login"); ?>" />
   </td>
  </tr>
 </table>
