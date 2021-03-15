@@ -1,6 +1,6 @@
 # SqirrelMail 1.5.2
 
-A version of SquirrelMail for PHP 7.0 and above with additional changes for compatibility or security reasons.
+A version of SquirrelMail for PHP 8.0 and above with additional changes for compatibility or security reasons.
 
 
 This version contains the following changes:
